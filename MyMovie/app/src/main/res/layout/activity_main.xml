@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="116dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="76dp"
+        android:layout_weight="1"
+        android:text="영화제목"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/etTitle"
+        app:layout_constraintEnd_toStartOf="@+id/ivPoster"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvDirector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="153dp"
+        android:text="감독 : "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintTop_toTopOf="@+id/ivPoster" />
+
+    <TextView
+        android:id="@+id/tvActors"
+        android:layout_width="76dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="64dp"
+        android:text="주연배우 : "
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlot"
+        app:layout_constraintStart_toStartOf="@+id/tvReleased"
+        app:layout_constraintTop_toBottomOf="@+id/tvReleased" />
+
+    <TextView
+        android:id="@+id/tvReleased"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="개봉일 : "
+        app:layout_constraintBottom_toTopOf="@+id/tvActors"
+        app:layout_constraintStart_toStartOf="@+id/tvGenre"
+        app:layout_constraintTop_toBottomOf="@+id/tvGenre" />
+
+    <ImageView
+        android:id="@+id/ivPoster"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginStart="52dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/tvGenre"
+        app:layout_constraintEnd_toStartOf="@+id/tvDirector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTitle"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="218dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginTop="144dp"
+        android:layout_weight="1"
+        android:text="검색"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etTitle"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="242dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="78dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="130dp"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="영화제목"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/ivPoster"
+        app:layout_constraintEnd_toStartOf="@+id/btnSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPlot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="63dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginStart="63dp"
+        android:layout_weight="1"
+        android:text="줄거리 : "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSearch" />
+
+    <TextView
+        android:id="@+id/tvGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:layout_marginStart="11dp"
+        android:text="장르 : "
+        app:layout_constraintBottom_toTopOf="@+id/tvReleased"
+        app:layout_constraintStart_toEndOf="@+id/ivPoster"
+        app:layout_constraintTop_toBottomOf="@+id/ivPoster" />
+
+</android.support.constraint.ConstraintLayout>
